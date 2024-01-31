@@ -1,0 +1,170 @@
+.image-uploader-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.uploader-heading {
+  font-size: 36px;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: typing 4s steps(40, end); /* Apply typing animation */
+}
+
+/* Define the typing animation */
+@keyframes typing {
+  from {
+    width: 0; /* Start with no width */
+  }
+  to {
+    width: 100%; /* End with full width */
+  }
+}
+
+.file-input-label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.upload-image {
+  width: 320px; /* Increase the width */
+  height: 320px; /* Increase the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  border: 6px dashed #007bff; /* Thicker dashed border */
+  border-radius: 20px; /* Rounded corners */
+  background: linear-gradient(135deg, #007bff, #00ccff); /* Gradient background */
+  color: #fff; /* White text color */
+  font-size: 54px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center;
+  cursor: pointer; /* Change cursor on hover */
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  position: relative; /* Position for pseudo-elements */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.upload-image::before,
+.upload-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1); /* White gradient overlay */
+  z-index: 1;
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.upload-image::before {
+  opacity: 0;
+}
+
+.upload-image::after {
+  opacity: 0.5; /* Adjust overlay opacity */
+}
+
+.upload-image:hover::before {
+  opacity: 0.5; /* Show overlay on hover */
+}
+
+.upload-image:hover::after {
+  opacity: 0; /* Hide overlay on hover */
+}
+
+.upload-image:hover {
+  background: linear-gradient(135deg, #0056b3, #00aaff); /* Darker gradient on hover */
+  border-color: #0056b3; /* Darker border color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+
+
+
+.upload-image-icon {
+  font-size: 60px; /* Icon size */
+  margin-bottom: 10px; /* Spacing between icon and text */
+}
+
+.file-input-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  /* border-radius: 50%; */
+  /* border: 2px dashed #007bff; Change border color as desired */
+}
+
+.file-input-label:hover::before {
+  background-color: rgba(0, 123, 255, 0.1); /* Change hover background color */
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+.upload-image {
+  max-width: 100%; /* Set maximum width to prevent stretching */
+  max-height: 332px; /* Set maximum height */
+  display: block;
+  margin: 0 auto 20px;
+  
+}
+
+.uploaded-image {
+  width: 150px; /* Adjust the width to make the uploaded images larger */
+  height: 150px; /* Adjust the height to make the uploaded images larger */
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+  margin-top: 34px;
+
+  /* Additional styles for uploaded images */
+}
+
+.print-button {
+  margin-top: 30px;
+  margin-bottom: 10x;
+  padding: 11px 44px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.print-button:hover {
+  background-color: #218838;
+}

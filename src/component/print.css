@@ -1,0 +1,24 @@
+
+
+    @page {
+        size: A4;
+        }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px); /* Adjust the column width as needed */
+    justify-content: space-between;
+    grid-gap: 0; /* Remove any gap between grid items */
+    /* margin: 0px; */
+    grid-row-gap:25px;
+    position: relative;
+    top: 50px;
+  }
+
+  .printimage {
+    width: 100%; /* Ensure images take up the full column width */
+    height: 40px; /* Adjust the image height as needed */
+    /* border: solid 1px black; */
+position: relative;
+bottom: 15px;
+  }
